@@ -38,6 +38,48 @@ Pick the level that feels right for you 👇
 
 ---
 
+## ✅ How to Submit Your Solution
+
+### ✔️ Step 1: Fork the Repository
+Click the **Fork** button on the top-right of this repo.
+
+---
+
+### ✔️ Step 2: Clone Your Fork
+```sh
+git clone https://github.com/<your-username>/MLSC_AIML_TASK.git
+cd MLSC_AIML_TASK
+```
+
+### ✔️ Step 3: Create a New Branch
+```sh
+git checkout -b <your-branch-name>
+```
+
+### ✔️ Step 4: Make Your Changes
+1. Add your folder (team name or your name)
+2. Add your code / notebook / demo files
+3. Add a short README explaining your project + chosen level ✅
+
+### ✔️ Step 5: Commit Your Changes
+```sh
+git add .
+git commit -m "Added AI/ML Project - <Team/Your Name>"
+```
+
+### ✔️ Step 6: Push Your Changes
+```sh
+git push origin <your-branch-name>
+```
+
+### ✔️ Step 7: Create a Pull Request
+On GitHub → Compare & Pull Request
+Ensure:
+base repository: yashgunjal95/MLSC_AIML_TASK
+base branch: main
+compare branch: <your-branch-name>
+
+
 ## 🧩 What We’re Looking For
 | Criteria | Description |
 |:--|:--|
