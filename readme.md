@@ -78,19 +78,19 @@ Sample Screenshots
 
 
 
-#📁 Project Structure
+## 📁 Project Structure
+
 Anime-Mentor-Bot/
-│── anime_mentor_bot.py
-│── requirements.txt
-│── README.md
+├── anime_mentor_bot.py
+├── requirements.txt
+├── README.md
 └── sample_output.png
 
-
-#🏷️ Level
+##🏷️ Level
 ✅ Intermediate
 (Custom personality using system prompts)
 
 
-#💙 Credits
+##💙 Credits
 Created for MLSC Internal Challenge — AI/ML Domain
 By Nilesh Sabale
