@@ -72,27 +72,25 @@ and purpose over fear."
 
 
 Sample Screenshots
-<img width="1358" height="550" alt="Screenshot" src="https://github.com/user-attachments/assets/748fac67-9606-44ef-99da-101f89734ed2" /> <img width="1441" height="608" alt="Screenshot" src="https://github.com/user-attachments/assets/8c262cb5-d193-4ea6-a6d1-69863b8d8df2" />
+<img width="1358" height="550" alt="Screenshot" src="https://github.com/user-attachments/assets/748fac67-9606-44ef-99da-101f89734ed2" />
 
-Place your own screenshot as:
-
-sample_output.png
+<img width="1441" height="608" alt="Screenshot" src="https://github.com/user-attachments/assets/8c262cb5-d193-4ea6-a6d1-69863b8d8df2" />
 
 
-📁 Project Structure
+
+#📁 Project Structure
 Anime-Mentor-Bot/
 │── anime_mentor_bot.py
 │── requirements.txt
 │── README.md
 └── sample_output.png
 
-🏷️ Level
 
+#🏷️ Level
 ✅ Intermediate
 (Custom personality using system prompts)
 
 
-💙 Credits
-
+#💙 Credits
 Created for MLSC Internal Challenge — AI/ML Domain
 By Nilesh Sabale
