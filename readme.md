@@ -99,3 +99,29 @@ So go for it, have fun, and let your imagination run wild! 🚀
 
 **Happy Building,  
 Team MLSC 💙**
+
+=================================================================
+
+# Anime Mentor Bot 🗡️
+
+Intermediate Level Project  
+MLSC Internal Challenge — AI/ML Domain
+
+## 📌 About the Project
+Anime Mentor Bot is a personality-based AI chatbot that speaks like a calm and wise anime mentor  
+(inspired by Kakashi, Gojo, Itachi).  
+It gives guidance, motivation, and explanations in a sharp and poetic anime style.
+
+## 🚀 Features
+- Custom personality using system prompts  
+- Clean and short anime-style replies  
+- Terminal-based chatbot  
+- Safe API usage with environment variables  
+- Perfect for screenshots and demo
+
+---
+
+## 🛠️ How to Run
+
+### 1️⃣ Install dependencies
+
