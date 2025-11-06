@@ -1,7 +1,7 @@
 from google import genai
 
 # DIRECT API KEY (local testing only — remove before GitHub)
-client = genai.Client(api_key="AIzaSyBszRLtwjYrRAXSlDI14sM1zQGaci0kLec")
+client = genai.Client(api_key="API KEY")
 
 def anime_mentor_response(user_input):
     system_prompt = """
