@@ -1,101 +1,99 @@
-# 🤖 MLSC Internal Challenge — AI/ML Domain  
-### 💡 *"Build Your Own Generative AI App — Your Way"*
+# Anime Mentor Bot 🗡️🌩️  
+### Intermediate Level — MLSC Internal AI/ML Challenge
 
-Welcome to the **AI/ML Challenge** of the MLSC Internal Event! 🎉  
-This task is all about **creativity, experimentation, and having fun** with generative AI.
+## 📌 Overview
+Anime Mentor Bot is a personality-based AI chatbot inspired by calm anime senseis like Kakashi, Gojo, Itachi, and Tanjiro.  
+It generates short, wise, mentor-style responses using the **Gemini 2.5 Flash (Free) model**.
 
-We’ve kept it **intentionally open-ended** so that everyone — from beginners to AI pros — can participate at their own comfort level and showcase their creativity.
-
----
-
-## 🧠 The Challenge
-Create **anything interesting** that uses generative AI.  
-Text, images, audio, code — whatever sparks your imagination.  
-Your project can be as simple or as wild as you want.
+This project belongs to the **Intermediate Level**, where the goal is to experiment with system prompts and create unique personalities.
 
 ---
 
-## 🚀 Choose Your Level
-Pick the level that feels right for you 👇
-
-| Level | Description | Example Ideas |
-|:--|:--|:--|
-| 🗨️ **Beginner** | Use an API or existing tool to make something simple. | A chatbot that gives jokes, compliments, or study tips. |
-| 💬 **Intermediate** | Play around with system prompts or personalities. | A “pirate bot”, “therapist bot”, or “motivational coach” chatbot. |
-| 📚 **Advanced** | Build a small RAG (Retrieval-Augmented Generation) app. | A bot that answers questions from a PDF or website. |
-| 🧠 **Pro** | Use LangChain or other frameworks for a full RAG pipeline. | “Ask my notes” or “Campus Helper” type of app. |
-| 🎨 **Creative Twist** | Mix text, image, or audio generation. | A story generator that also creates matching art or voiceovers. |
-| 🤖 **Ultimate** | Design AI agents that plan or interact. | A multi-agent setup that collaborates to get things done. |
+## 🔥 Features
+- Custom anime-style mentor personality  
+- Runs locally in the terminal  
+- Uses **Google Gemini Free API**  
+- Fast & lightweight  
+- No paid tools needed  
 
 ---
 
-## 🕒 Submission Guide
-1. Fork this repository 🍴  
-2. Create a new folder with your team name or your name.  
-3. Add your project files (code, notebook, or demo).  
-4. Include a short README inside your folder explaining your project.  
-5. Open a pull request (PR) to submit your work ✅  
+## 🧠 How It Works
+1. The bot uses a **system prompt** that sets the anime mentor personality.  
+2. User asks any question (study, motivation, life advice).  
+3. Model responds in calm, sharp anime-style lines.  
+4. Terminal interface makes the project simple and easy to run.  
 
 ---
 
-## ✅ How to Submit Your Solution
+## 🛠️ Setup & Installation
 
-### ✔️ Step 1: Fork the Repository
-Click the **Fork** button on the top-right of this repo.
+### 1️⃣ Install Dependencies
 
----
+pip install -r requirements.txt
 
-### ✔️ Step 2: Clone Your Fork
-```sh
-git clone https://github.com/<your-username>/MLSC_AIML_TASK.git
-cd MLSC_AIML_TASK
+
+2️⃣ Add Your Gemini API Key
+
+Get your free key from:
+https://aistudio.google.com/app/apikey
+
+Set it as an environment variable:
+
+Windows PowerShell
+setx GOOGLE_API_KEY "your_api_key_here"
+
+
+Restart PowerShell after doing this.
+
+
+🚀 Running the Bot
+python anime_mentor_bot.py
+
+
+You will see:
+
+=== Anime Mentor Bot 🌩️ ===
+Speak your thoughts, young warrior...
+
+
+Ask anything like:
+
+Sensei, how do I stay calm before exams?
+
+
+🧪 Sample Output
+User: How do I stay focused?
+
+Mentor:
+"Focus is not force.
+It's choosing silence over noise,
+and purpose over fear."
+
+
+Sample Screenshots
+<img width="1358" height="550" alt="Screenshot" src="https://github.com/user-attachments/assets/748fac67-9606-44ef-99da-101f89734ed2" />
+
+<img width="1441" height="608" alt="Screenshot" src="https://github.com/user-attachments/assets/8c262cb5-d193-4ea6-a6d1-69863b8d8df2" />
+
+
+## 📁 Project Structure
+
+```
+Anime-Mentor-Bot/
+├── anime_mentor_bot.py
+├── requirements.txt
+├── README.md
+└── sample_output.png
 ```
 
-### ✔️ Step 3: Create a New Branch
-```sh
-git checkout -b <your-branch-name>
-```
-
-### ✔️ Step 4: Make Your Changes
-1. Add your folder (team name or your name)
-2. Add your code / notebook / demo files
-3. Add a short README explaining your project + chosen level ✅
-
-### ✔️ Step 5: Commit Your Changes
-```sh
-git add .
-git commit -m "Added AI/ML Project - <Team/Your Name>"
-```
-
-### ✔️ Step 6: Push Your Changes
-```sh
-git push origin <your-branch-name>
-```
-
-### ✔️ Step 7: Create a Pull Request
-On GitHub → Compare & Pull Request
-Ensure:
-base repository: yashgunjal95/MLSC_AIML_TASK
-base branch: main
-compare branch: <your-branch-name>
 
 
-## 🧩 What We’re Looking For
-| Criteria | Description |
-|:--|:--|
-| 💡 Creativity | Original, fun, or surprising ideas. |
-| ⚙️ Implementation | Some working demo or prototype. |
-| 🧱 Effort | You explored, learned, or tried something new. |
-| 🎤 Presentation | Clear explanation of what it does and how. |
+## 🏷️ Level
+✅ Intermediate  
+(Custom personality using system prompts)
 
----
 
-## 💬 Final Note
-This isn’t about perfection — it’s about **trying, building, and showing off your creative side**.  
-Even a simple idea done well can stand out.  
-So go for it, have fun, and let your imagination run wild! 🚀
-
----
-
-**Happy Building,  
-Team MLSC 💙**
+## 💙 Credits
+Created for MLSC Internal Challenge — AI/ML Domain  
+By Nilesh Sabale
