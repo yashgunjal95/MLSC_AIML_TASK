@@ -1,0 +1,7 @@
+pypdf
+chromadb
+sentence-transformers
+transformers
+torch
+gtts
+pygame
