@@ -1,0 +1,12 @@
+# requirements.txt
+numpy
+faiss-cpu
+sentence-transformers
+pdfplumber
+beautifulsoup4
+requests
+tqdm
+python-dotenv
+streamlit
+google-generativeai
+scikit-learn

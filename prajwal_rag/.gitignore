@@ -1,0 +1,15 @@
+# .gitignore
+__pycache__/
+*.pyc
+.env
+.env.* 
+.vscode/
+*.sqlite3
+model/
+*.pth
+*.joblib
+*.db
+data/*.pdf
+data/*.html
+.envrc
+.ipynb_checkpoints/
