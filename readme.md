@@ -1,101 +1,133 @@
-# 🤖 MLSC Internal Challenge — AI/ML Domain  
-### 💡 *"Build Your Own Generative AI App — Your Way"*
+🤖 RAG Q&A — PDF / Website Retriever (Gemini-Powered)
+📘 Overview
 
-Welcome to the **AI/ML Challenge** of the MLSC Internal Event! 🎉  
-This task is all about **creativity, experimentation, and having fun** with generative AI.
+RAG Q&A (Retrieval-Augmented Generation) is a Streamlit-based web application that allows users to upload research papers (PDFs) or retrieve website content, and then ask natural language questions about the ingested documents.
 
-We’ve kept it **intentionally open-ended** so that everyone — from beginners to AI pros — can participate at their own comfort level and showcase their creativity.
+It uses Google Gemini 1.5 Flash as the LLM for generating context-aware answers, combined with a vector-based retriever (FAISS) for document search and relevance ranking.
 
----
+🚀 Features
 
-## 🧠 The Challenge
-Create **anything interesting** that uses generative AI.  
-Text, images, audio, code — whatever sparks your imagination.  
-Your project can be as simple or as wild as you want.
+📄 Upload and process PDFs or website data
 
----
+🔍 Ask natural language questions about the uploaded content
 
-## 🚀 Choose Your Level
-Pick the level that feels right for you 👇
+⚡ Powered by Google Gemini 1.5 Flash — fast, accurate, and free-tier compatible
 
-| Level | Description | Example Ideas |
-|:--|:--|:--|
-| 🗨️ **Beginner** | Use an API or existing tool to make something simple. | A chatbot that gives jokes, compliments, or study tips. |
-| 💬 **Intermediate** | Play around with system prompts or personalities. | A “pirate bot”, “therapist bot”, or “motivational coach” chatbot. |
-| 📚 **Advanced** | Build a small RAG (Retrieval-Augmented Generation) app. | A bot that answers questions from a PDF or website. |
-| 🧠 **Pro** | Use LangChain or other frameworks for a full RAG pipeline. | “Ask my notes” or “Campus Helper” type of app. |
-| 🎨 **Creative Twist** | Mix text, image, or audio generation. | A story generator that also creates matching art or voiceovers. |
-| 🤖 **Ultimate** | Design AI agents that plan or interact. | A multi-agent setup that collaborates to get things done. |
+🧩 Uses RAG (Retrieval-Augmented Generation) pipeline
 
----
+🧠 Stores embeddings locally using FAISS
 
-## 🕒 Submission Guide
-1. Fork this repository 🍴  
-2. Create a new folder with your team name or your name.  
-3. Add your project files (code, notebook, or demo).  
-4. Include a short README inside your folder explaining your project.  
-5. Open a pull request (PR) to submit your work ✅  
+🖥️ Clean Streamlit UI
 
----
+🧾 Displays source context for transparency
 
-## ✅ How to Submit Your Solution
+🧠 How It Works
 
-### ✔️ Step 1: Fork the Repository
-Click the **Fork** button on the top-right of this repo.
+Document Ingestion
+Upload PDFs or retrieve text from a website.
+The content is split into smaller, meaningful text chunks using LangChain’s RecursiveCharacterTextSplitter.
 
----
+Embedding Creation
+Each text chunk is converted into numerical embeddings using
+GoogleGenerativeAIEmbeddings (models/embedding-001).
 
-### ✔️ Step 2: Clone Your Fork
-```sh
-git clone https://github.com/<your-username>/MLSC_AIML_TASK.git
-cd MLSC_AIML_TASK
-```
+Question Answering
+When the user enters a query:
 
-### ✔️ Step 3: Create a New Branch
-```sh
-git checkout -b <your-branch-name>
-```
+The retriever finds the top k relevant text chunks using FAISS.
 
-### ✔️ Step 4: Make Your Changes
-1. Add your folder (team name or your name)
-2. Add your code / notebook / demo files
-3. Add a short README explaining your project + chosen level ✅
+These chunks are sent to Gemini 1.5 Flash as contextual input.
 
-### ✔️ Step 5: Commit Your Changes
-```sh
-git add .
-git commit -m "Added AI/ML Project - <Team/Your Name>"
-```
+The model generates an accurate, well-formatted answer.
 
-### ✔️ Step 6: Push Your Changes
-```sh
-git push origin <your-branch-name>
-```
+🏗️ Tech Stack
+Component	Technology Used
+Frontend	Streamlit
+Backend	Python
+LLM	Google Gemini 1.5 Flash
+Vector Database	FAISS
+Embeddings	Google Generative AI Embeddings
+Document Processing	LangChain
+File Handling	PyPDF2
+Environment	.env + .gitignore (secure API key handling)
+🧩 Folder Structure
+📂 prajwal_rag/
+├── app_streamlit.py          # Streamlit frontend
+├── rag_engine.py             # Core RAG logic
+├── requirements.txt          # Dependencies list
+├── README.md                 # Documentation
+├── .env.example              # Sample environment file (safe)
+├── .gitignore                # Ignored files (e.g., .env, .venv)
+├── screenshots/              # Output screenshots
+│   ├── output1.png
+│   └── output2.png
+└── vectorstore/              # FAISS vector database
 
-### ✔️ Step 7: Create a Pull Request
-On GitHub → Compare & Pull Request
-Ensure:
-base repository: yashgunjal95/MLSC_AIML_TASK
-base branch: main
-compare branch: <your-branch-name>
+⚙️ Installation & Setup
+🪜 Step 1: Clone the Repository
+git clone https://github.com/your-username/MLSC_AIML_TASK.git
+cd MLSC_AIML_TASK/prajwal_rag
+
+🪜 Step 2: Create Virtual Environment
+python -m venv .venv
+.venv\Scripts\activate        # Windows
+source .venv/bin/activate     # macOS/Linux
+
+🪜 Step 3: Install Requirements
+pip install -r requirements.txt
+
+🪜 Step 4: Add Gemini API Key
+
+Create a .env file in the same directory:
+
+GEMINI_API_KEY=your_google_api_key_here
 
 
-## 🧩 What We’re Looking For
-| Criteria | Description |
-|:--|:--|
-| 💡 Creativity | Original, fun, or surprising ideas. |
-| ⚙️ Implementation | Some working demo or prototype. |
-| 🧱 Effort | You explored, learned, or tried something new. |
-| 🎤 Presentation | Clear explanation of what it does and how. |
+(Note: .env is ignored by Git for safety)
 
----
+🪜 Step 5: Run the Streamlit App
+streamlit run app_streamlit.py
 
-## 💬 Final Note
-This isn’t about perfection — it’s about **trying, building, and showing off your creative side**.  
-Even a simple idea done well can stand out.  
-So go for it, have fun, and let your imagination run wild! 🚀
+📸 Screenshots
+🖥️ 1. Application Interface
 
----
+🧠 2. Example Query — “Who are the authors of the CityZen paper?”
 
-**Happy Building,  
-Team MLSC 💙**
+🧠 Example Query
+
+User Query:
+
+“Who are the authors of the CityZen research paper?”
+
+Generated Answer:
+
+Based on the retrieved document, the authors of the CityZen paper are:
+Kalpesh Joshi, Prajwal Bhosale, Shivprasad Bhure, Atharv Bhutada, Bhupen Bibekar, Madhur Biradar, and Aditya Birajdar.
+
+Source: Research Paper2.pdf (Vishwakarma Institute of Technology, Pune)
+
+🧑‍💻 Contributors
+Name	Role
+Prajwal Bhosale	Developer & Researcher
+Google Gemini 1.5 Flash	LLM Backend
+LangChain + Streamlit	Framework & Interface
+🏁 Future Enhancements
+
+📚 Multi-file PDF support
+
+🌐 Website content summarization
+
+💬 Persistent chat memory
+
+☁️ Deployment on Streamlit Cloud or Hugging Face Spaces
+
+🪪 License
+
+This project is open-source and distributed under the MIT License
+.
+
+💙 Acknowledgment
+
+Built as part of the Microsoft Learn Student Community (MLSC) Internal AI/ML Challenge — “Build Your Own Generative AI App”.
+
+Special thanks to MLSC mentors and organizers for guidance and inspiration. 💫
